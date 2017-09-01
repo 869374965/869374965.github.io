@@ -94,19 +94,19 @@
 
 
 
-<meta name="description" content="missingMessage：未填写时右边显示的信息 validType：验证类型 invalidMessage：无效的数据类型时显示的信息 required=”true” 必填项 class=”easyui-validatebox” 文本验证 class=”easyui-numberbox” 数字验证">
+<meta name="description" content="missingMessage：未填写时右边显示的信息 validType：验证类型 invalidMessage：无效的数据类型时显示的信息 required=”true” 必填项 class=”easyui-validatebox” 文本验证 class=”easyui-numberbox” 数字验证 easy UI如果我们想添加自定义验证方法，可以直接写在equals结构后面，代码如下：1">
 <meta name="keywords" content="easyUI">
 <meta property="og:type" content="article">
 <meta property="og:title" content="EasyUI 验证框使用方法">
 <meta property="og:url" content="http://yoursite.com/2017/09/01/2017-9-1-2/index.html">
 <meta property="og:site_name" content="且行且珍惜">
-<meta property="og:description" content="missingMessage：未填写时右边显示的信息 validType：验证类型 invalidMessage：无效的数据类型时显示的信息 required=”true” 必填项 class=”easyui-validatebox” 文本验证 class=”easyui-numberbox” 数字验证">
+<meta property="og:description" content="missingMessage：未填写时右边显示的信息 validType：验证类型 invalidMessage：无效的数据类型时显示的信息 required=”true” 必填项 class=”easyui-validatebox” 文本验证 class=”easyui-numberbox” 数字验证 easy UI如果我们想添加自定义验证方法，可以直接写在equals结构后面，代码如下：1">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2017/09/01/2017-9-1-2/WechatIMG4.jpeg">
-<meta property="og:updated_time" content="2017-09-01T03:27:15.000Z">
+<meta property="og:updated_time" content="2017-09-01T03:34:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="EasyUI 验证框使用方法">
-<meta name="twitter:description" content="missingMessage：未填写时右边显示的信息 validType：验证类型 invalidMessage：无效的数据类型时显示的信息 required=”true” 必填项 class=”easyui-validatebox” 文本验证 class=”easyui-numberbox” 数字验证">
+<meta name="twitter:description" content="missingMessage：未填写时右边显示的信息 validType：验证类型 invalidMessage：无效的数据类型时显示的信息 required=”true” 必填项 class=”easyui-validatebox” 文本验证 class=”easyui-numberbox” 数字验证 easy UI如果我们想添加自定义验证方法，可以直接写在equals结构后面，代码如下：1">
 <meta name="twitter:image" content="http://yoursite.com/2017/09/01/2017-9-1-2/WechatIMG4.jpeg">
 
 
@@ -334,7 +334,7 @@
 <p>required=”true” 必填项</p>
 <p>class=”easyui-validatebox” 文本验证</p>
 <p>class=”easyui-numberbox” 数字验证</p>
-</blockquote>
+<h3 id="easy-UI如果我们想添加自定义验证方法，可以直接写在equals结构后面，代码如下："><a href="#easy-UI如果我们想添加自定义验证方法，可以直接写在equals结构后面，代码如下：" class="headerlink" title="easy UI如果我们想添加自定义验证方法，可以直接写在equals结构后面，代码如下："></a>easy UI如果我们想添加自定义验证方法，可以直接写在equals结构后面，代码如下：</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">$.extend($.fn.validatebox.defaults.rules, &#123;</div><div class="line">    equals: &#123;    </div><div class="line">        validator: <span class="function"><span class="keyword">function</span>(<span class="params">value,param</span>)</span>&#123;    </div><div class="line">            <span class="keyword">return</span> value == $(param[<span class="number">0</span>]).val();    </div><div class="line">        &#125;,    </div><div class="line">        message: <span class="string">'Field do not match.'</span>   </div><div class="line">    &#125;,  </div><div class="line">    onlyNum:&#123;</div><div class="line">        validator:<span class="function"><span class="keyword">function</span>(<span class="params">value,param</span>)</span>&#123;</div><div class="line">            <span class="keyword">var</span> reg = <span class="regexp">/^\d+$/g</span>;</div><div class="line">            <span class="keyword">return</span> reg.test(value);</div><div class="line">        &#125;,</div><div class="line">        message:  <span class="string">'只能输入数字！'</span></div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">//调用方式：</span></div><div class="line">&lt;input name=<span class="string">"number"</span> type=<span class="string">"text"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"easyui-validatebox"</span> required=<span class="string">"required"</span> validType=<span class="string">"onlyNum"</span> /&gt;</div></pre></td></tr></table></figure></blockquote>
 
       
     </div>
@@ -425,8 +425,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/pyy2.jpg"
@@ -479,6 +488,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#easy-UI如果我们想添加自定义验证方法，可以直接写在equals结构后面，代码如下："><span class="nav-number">1.</span> <span class="nav-text">easy UI如果我们想添加自定义验证方法，可以直接写在equals结构后面，代码如下：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

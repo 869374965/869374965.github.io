@@ -336,7 +336,7 @@
 <p>required=”true” 必填项</p>
 <p>class=”easyui-validatebox” 文本验证</p>
 <p>class=”easyui-numberbox” 数字验证</p>
-</blockquote>
+<h3 id="easy-UI如果我们想添加自定义验证方法，可以直接写在equals结构后面，代码如下："><a href="#easy-UI如果我们想添加自定义验证方法，可以直接写在equals结构后面，代码如下：" class="headerlink" title="easy UI如果我们想添加自定义验证方法，可以直接写在equals结构后面，代码如下："></a>easy UI如果我们想添加自定义验证方法，可以直接写在equals结构后面，代码如下：</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">$.extend($.fn.validatebox.defaults.rules, &#123;</div><div class="line">    equals: &#123;    </div><div class="line">        validator: <span class="function"><span class="keyword">function</span>(<span class="params">value,param</span>)</span>&#123;    </div><div class="line">            <span class="keyword">return</span> value == $(param[<span class="number">0</span>]).val();    </div><div class="line">        &#125;,    </div><div class="line">        message: <span class="string">'Field do not match.'</span>   </div><div class="line">    &#125;,  </div><div class="line">    onlyNum:&#123;</div><div class="line">        validator:<span class="function"><span class="keyword">function</span>(<span class="params">value,param</span>)</span>&#123;</div><div class="line">            <span class="keyword">var</span> reg = <span class="regexp">/^\d+$/g</span>;</div><div class="line">            <span class="keyword">return</span> reg.test(value);</div><div class="line">        &#125;,</div><div class="line">        message:  <span class="string">'只能输入数字！'</span></div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">//调用方式：</span></div><div class="line">&lt;input name=<span class="string">"number"</span> type=<span class="string">"text"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"easyui-validatebox"</span> required=<span class="string">"required"</span> validType=<span class="string">"onlyNum"</span> /&gt;</div></pre></td></tr></table></figure></blockquote>
 
           
         
@@ -667,6 +667,7 @@
 <p>hexo server -p 5000 #更改端口</p>
 <p>hexo server -i 192.168.1.1 #自定义 IP</p>
 <p>hexo clean #清除缓存，若是网页正常情况下可以忽略这条命令</p>
+<p><img src="/2017/08/11/17_8_11/xxxx/img_name.jpg" alt="a"> 插入图片. xxxx为md文件名（也为存放图片的同名文件夹）</p>
 
           
         
